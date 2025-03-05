@@ -10,4 +10,3 @@ com\company\fileSharingManagement\repository\FileRepository.class
 com\company\fileSharingManagement\configuration\SecurityConfig.class
 com\company\fileSharingManagement\service\FileService.class
 com\company\fileSharingManagement\exception\GlobalExceptionHandler.class
-com\company\fileSharingManagement\security\ClerkAuthFilter.class

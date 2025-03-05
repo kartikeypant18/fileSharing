@@ -1,11 +1,11 @@
-# FROM eclipse-temurin:17-jdk
-# WORKDIR /app
-# COPY . .
-# RUN mvn clean package -DskipTests
-# CMD ["java", "-jar", "target/*.jar"]
-FROM eclipse-temurin:17-jdk
+# Use an official OpenJDK runtime as a parent image
+FROM openjdk:17
+
+# Set the working directory inside the container
 WORKDIR /app
-COPY . .
-RUN ./mvnw clean package -DskipTests
-EXPOSE 8080
-CMD ["java", "-jar", "target/*.jar"]
+
+# Copy the JAR file into the container
+COPY target/fileSharingManagement-0.0.1-SNAPSHOT.jar .
+
+# Run the application with the correct JAR name
+ENTRYPOINT ["java", "-jar", "fileSharingManagement-0.0.1-SNAPSHOT.jar"]
